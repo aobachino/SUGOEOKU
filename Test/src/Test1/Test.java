@@ -27,6 +27,14 @@ public class Test extends HttpServlet {
 	static ProgressEvent progressEvent = new ProgressEvent();
 	static MapData mapEvent = new MapData();
 
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		String url = "jsp/toppage.jsp";
+		response.sendRedirect(url);
+	}
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 

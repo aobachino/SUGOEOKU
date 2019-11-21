@@ -129,6 +129,12 @@
     	<url-pattern>/Test</url-pattern>
     </servlet-mapping>
 
+	<web-app>
+	  <filter>
+	    <filter-name>ExFilterServlet</filter-name>
+	    <filter-class>Test.ExFilterServlet</filter-class>
+	  </filter>
+	</web-app>
   <!-- The JSP page compiler and execution servlet, which is the mechanism  -->
   <!-- used by Tomcat to support JSP pages.  Traditionally, this servlet    -->
   <!-- is mapped to the URL pattern "*.jsp".  This servlet supports the     -->

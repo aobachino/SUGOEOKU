@@ -14,8 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/amazing.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
     <script type="text/javascript" src="../js/roulette.js"></script>
-    <script type="text/javascript" src="../js/result.js"></script>
+        <script type="text/javascript" src="../js/result.js"></script>
     <title>運ゲーすごろく</title>
 </head>
 <body>
@@ -50,14 +51,14 @@
 	<div class="container">
 	    <main class="main">
 	    	<%if(name != ""){ %>
-		    <h3><%= name %>のターンです。</h3>
+		    <h3 class="animated zoomIn" align="center"><%= name %>のターンです。</h3>
 		    <%} else{ %>
-		    <h3>ゲーム終了です</h3>
+		    <h3 class="animated heartBeat" align="center">ゲーム終了です</h3>
 		    <%} %>
     		<section>
-		    	<%@ include file="trout.jsp" %>
+				<%@ include file="trout.jsp" %>
         	</section>
-	    </main>
+        </main>
 	    <nav class="navigation">
 	            <%if(name != ""){ %>
 					<div class="outline">
@@ -70,7 +71,7 @@
 	     		    </div>
 	            <%} else{ %>
 	            	<div class="outline">
-	            		<input type="button" value="結果計算" onclick="calc();" class="button"/>
+	            		<input type="button" value="結果計算" onclick="calc();" class="button animated bounceInDown"/>
 	            		<input type="hidden" value="<%=playerMoneys%>" id="resMoney"/>
 	            		<input type="hidden" value="<%=playerNames%>" id="resName"/>
 	            	</div>
@@ -79,7 +80,7 @@
 			<table border="1"class="status">
 				<%for(int i=0;i<playerList.size();i++){ %>
 					<tr >
-						<th><%= "p" + (i+1) %></th>
+						<th><%= "P".concat(String.valueOf(i+1)) %></th>
 						<td><%= playerList.get(i).name %></td>
 						<td><%= playerList.get(i).money %>円</td>
 						<td><%= playerList.get(i).progressCount %>マス</td>
@@ -87,7 +88,7 @@
 				<%} %>
 			</table>
 			<%if(!logs.equals(null) ){ %>
-				<table border="1"class="status">
+				<table border="1"class="status animated flipInX">
 					<%for(int i=0;i<logs.size();i++){ %>
 						<tr>
 							<td><%= logs.get(i) %></td>
@@ -98,6 +99,10 @@
 			<div id="result">
 
 			</div>
+			<br>
+			<form action="/Test/Test">
+		    	<input type="submit" value="戻る" id="retuen" class="button"/>
+			</form>
 	    </nav>
     </div>
 </body>

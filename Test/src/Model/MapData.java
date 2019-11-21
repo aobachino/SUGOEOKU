@@ -62,10 +62,12 @@ public class MapData {
 	}
 
 	public PlayersData mapRun(PlayersData player) {
+
 		if (player.progressCount >= 40) {
 			progressEvent.GoalEvent(player);
 			return player;
 		}
+
 		switch (mapArea[player.progressCount]) {
 		case 1:
 			plusEvent.IncreaseMoneyEvent(player);

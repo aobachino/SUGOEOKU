@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="../css/toppage.css">
 <link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/animate.min.css">
 <script src="../js/playerFormVali.js"></script>
 <title>運ゲーすごろく</title>
 </head>
@@ -13,7 +14,7 @@
     <main>
         <form action="/Test/Test" method="post" name="id_forms">
                 <span id="name_error" class="error_m"></span>
-                <ul class="playersList">
+                <ul class="playersList animated bounceInLeft">
                     <li class="player">
                         <label for="name" class="tagu">プレイヤー名</label>
                         <input type="text" name="playerName"  maxlength="10" size="40">

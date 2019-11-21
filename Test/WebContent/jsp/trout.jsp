@@ -4,8 +4,6 @@
 	pageEncoding="UTF-8" session="false"
 	import="Model.PlayersData"
 	import="javax.servlet.http.HttpSession"
-	import="Model.PlayersData"
-	import="java.util.ArrayList"
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +16,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <section>
         <article class="line1">
             <div id="0" class="start" align="center">
@@ -150,7 +149,7 @@
             </div>
         </article>
     </section>
-     <script type="text/javascript" src="../js/progress.js"></script>
+    <script type="text/javascript" src="../js/progress.js"></script>
     <script src="../js/arrows.js"></script>
 </body>
 </html>

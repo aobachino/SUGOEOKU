@@ -67,8 +67,10 @@ public class Game extends HttpServlet {
 		for (int i = 0; i < playersList.size(); i++) {
 			session.setAttribute(playerNames.get(i), playersList.get(i));
 		}
-		response.setContentType("text/html");
+
+		System.out.println("テスト");
 		String url = "jsp/amazing.jsp";
+		//response.sendRedirect(url);
 		RequestDispatcher dispatch = request.getRequestDispatcher(url);
 		dispatch.forward(request, response);
 

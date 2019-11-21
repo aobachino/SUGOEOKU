@@ -9,6 +9,7 @@ function calc(){
 	for(i=0;i<strMoney.length;i++){
 		money[i] = Number(strMoney[i])
 	}
+	money.sort();
 
 	var sorted = [];
 	for(i=0;i<strName.length;i++){
@@ -18,6 +19,8 @@ function calc(){
 		 sorted[i] = result;
 	}
 
+	console.log(sorted);
+
 	sorted.sort(function(a, b) {
 
 		return a.money < b.money ? 1 : -1;
@@ -26,7 +29,7 @@ function calc(){
 
 	var table = document.createElement("table");
 	table.setAttribute("border",1);
-	table.setAttribute("class","status");
+
 	for(i=0;i<sorted.length;i++){
 		var tr = table.insertRow( -1 );
 		for(j=1;j<= Object.keys(result).length + 1;j++){
